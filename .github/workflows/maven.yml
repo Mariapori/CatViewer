@@ -29,8 +29,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Artifact
     - uses: actions/upload-artifact@v3
+    - name: Artifact
       with:
           name: jar
           path: |
