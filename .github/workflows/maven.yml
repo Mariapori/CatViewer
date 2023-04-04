@@ -29,5 +29,11 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Artifact
+    - uses: actions/upload-artifact@v3
+      with:
+          name: jar
+          path: |
+            /home/runner/work/CatViewer/CatViewer/target/*.jar
       
       
